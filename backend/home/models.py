@@ -5,4 +5,4 @@ class Hello(models.Model):
     sdsdsdsdssd = models.BigIntegerField(null=True,blank=True,)
 class Helloo(models.Model):
     'Generated Model'
-    dsdsdsjh = models.BigIntegerField(blank=True,null=True,)
+    dsdsdsjhhjjh = models.BigIntegerField(null=True,blank=True,)
