@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Hello,Helloo,Pet,Hello,Helloo,Pet,Hello,Helloo,Pet
-from .serializers import HelloSerializer,HellooSerializer,PetSerializer,HelloSerializer,HellooSerializer,PetSerializer,HelloSerializer,HellooSerializer,PetSerializer
+from home.models import Hello,Helloo,Pet,Customer,Salon,Customer,Hello,Helloo,Pet,Salon,Customer,Hello,Helloo,Pet,Salon
+from .serializers import HelloSerializer,HellooSerializer,PetSerializer,CustomerSerializer,SalonSerializer,CustomerSerializer,HelloSerializer,HellooSerializer,PetSerializer,SalonSerializer,CustomerSerializer,HelloSerializer,HellooSerializer,PetSerializer,SalonSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,13 @@ class PetViewSet(viewsets.ModelViewSet):
     serializer_class = PetSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Pet.objects.all()
+
+class CustomerViewSet(viewsets.ModelViewSet):
+    serializer_class = CustomerSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Customer.objects.all()
+
+class SalonViewSet(viewsets.ModelViewSet):
+    serializer_class = SalonSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Salon.objects.all()
