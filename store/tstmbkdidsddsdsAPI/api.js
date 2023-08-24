@@ -47,6 +47,24 @@ function api_v1_helloo_destroy(payload) {
 function api_v1_login_create(payload) {
   return tstmbkdidsddsdsAPI.post(`/api/v1/login/`, payload)
 }
+function api_v1_pet_list(payload) {
+  return tstmbkdidsddsdsAPI.get(`/api/v1/pet/`)
+}
+function api_v1_pet_create(payload) {
+  return tstmbkdidsddsdsAPI.post(`/api/v1/pet/`, payload)
+}
+function api_v1_pet_retrieve(payload) {
+  return tstmbkdidsddsdsAPI.get(`/api/v1/pet/${payload.id}/`)
+}
+function api_v1_pet_update(payload) {
+  return tstmbkdidsddsdsAPI.put(`/api/v1/pet/${payload.id}/`, payload)
+}
+function api_v1_pet_partial_update(payload) {
+  return tstmbkdidsddsdsAPI.patch(`/api/v1/pet/${payload.id}/`, payload)
+}
+function api_v1_pet_destroy(payload) {
+  return tstmbkdidsddsdsAPI.delete(`/api/v1/pet/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return tstmbkdidsddsdsAPI.post(`/api/v1/signup/`, payload)
 }
@@ -101,6 +119,12 @@ export const apiService = {
   api_v1_helloo_partial_update,
   api_v1_helloo_destroy,
   api_v1_login_create,
+  api_v1_pet_list,
+  api_v1_pet_create,
+  api_v1_pet_retrieve,
+  api_v1_pet_update,
+  api_v1_pet_partial_update,
+  api_v1_pet_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
