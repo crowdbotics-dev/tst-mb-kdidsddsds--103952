@@ -8,6 +8,24 @@ function api_docs_schema_retrieve(payload) {
     params: { lang: payload.lang }
   })
 }
+function api_v1_customer_list(payload) {
+  return tstmbkdidsddsdsAPI.get(`/api/v1/customer/`)
+}
+function api_v1_customer_create(payload) {
+  return tstmbkdidsddsdsAPI.post(`/api/v1/customer/`, payload)
+}
+function api_v1_customer_retrieve(payload) {
+  return tstmbkdidsddsdsAPI.get(`/api/v1/customer/${payload.id}/`)
+}
+function api_v1_customer_update(payload) {
+  return tstmbkdidsddsdsAPI.put(`/api/v1/customer/${payload.id}/`, payload)
+}
+function api_v1_customer_partial_update(payload) {
+  return tstmbkdidsddsdsAPI.patch(`/api/v1/customer/${payload.id}/`, payload)
+}
+function api_v1_customer_destroy(payload) {
+  return tstmbkdidsddsdsAPI.delete(`/api/v1/customer/${payload.id}/`)
+}
 function api_v1_hello_list(payload) {
   return tstmbkdidsddsdsAPI.get(`/api/v1/hello/`)
 }
@@ -65,6 +83,24 @@ function api_v1_pet_partial_update(payload) {
 function api_v1_pet_destroy(payload) {
   return tstmbkdidsddsdsAPI.delete(`/api/v1/pet/${payload.id}/`)
 }
+function api_v1_salon_list(payload) {
+  return tstmbkdidsddsdsAPI.get(`/api/v1/salon/`)
+}
+function api_v1_salon_create(payload) {
+  return tstmbkdidsddsdsAPI.post(`/api/v1/salon/`, payload)
+}
+function api_v1_salon_retrieve(payload) {
+  return tstmbkdidsddsdsAPI.get(`/api/v1/salon/${payload.id}/`)
+}
+function api_v1_salon_update(payload) {
+  return tstmbkdidsddsdsAPI.put(`/api/v1/salon/${payload.id}/`, payload)
+}
+function api_v1_salon_partial_update(payload) {
+  return tstmbkdidsddsdsAPI.patch(`/api/v1/salon/${payload.id}/`, payload)
+}
+function api_v1_salon_destroy(payload) {
+  return tstmbkdidsddsdsAPI.delete(`/api/v1/salon/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return tstmbkdidsddsdsAPI.post(`/api/v1/signup/`, payload)
 }
@@ -106,6 +142,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_customer_list,
+  api_v1_customer_create,
+  api_v1_customer_retrieve,
+  api_v1_customer_update,
+  api_v1_customer_partial_update,
+  api_v1_customer_destroy,
   api_v1_hello_list,
   api_v1_hello_create,
   api_v1_hello_retrieve,
@@ -125,6 +167,12 @@ export const apiService = {
   api_v1_pet_update,
   api_v1_pet_partial_update,
   api_v1_pet_destroy,
+  api_v1_salon_list,
+  api_v1_salon_create,
+  api_v1_salon_retrieve,
+  api_v1_salon_update,
+  api_v1_salon_partial_update,
+  api_v1_salon_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
