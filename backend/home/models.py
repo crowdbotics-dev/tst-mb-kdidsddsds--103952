@@ -6,6 +6,7 @@ class Hello(models.Model):
 class Helloo(models.Model):
     'Generated Model'
     dsdsdsjhhjjh = models.BigIntegerField(null=True,blank=True,)
+    python = models.BooleanField(null=True,blank=True,)
 class Pet(models.Model):
     'Generated Model'
     name = models.CharField(max_length=100,)
